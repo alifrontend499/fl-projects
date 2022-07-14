@@ -1,0 +1,129 @@
+// btn main
+.st-btn {
+    border: none;
+    border-radius: 0;
+    padding: 8px 15px;
+    font-size: 17px;
+    @include transition;
+
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    // width
+    &:not(.no-min-width) {
+        min-width: 200px;
+    }
+
+    // width
+    &:not(.no-height) {
+        height: 45px;
+    }
+
+    // 0 padding
+    &.no-padding {
+        padding: 0;
+    }
+
+
+    // TYPES
+    // primary
+    &.st-btn-primary-gradient {
+        background: rgb(1, 163, 204);
+        background: linear-gradient(35deg, rgba(1, 163, 204, 1) 31%, rgba(19, 61, 167, 1) 100%);
+        color: #fff;
+
+        &:hover {
+            opacity: .9;
+        }
+
+        &:active {
+            opacity: .8;
+        }
+    }
+
+    // gradient - primary
+    &.st-btn-primary {
+        background: $primary-color;
+        color: #fff;
+
+        &:hover {
+            background: darken($color: $primary-color, $amount: 5);
+        }
+
+        &:active {
+            background: darken($color: $primary-color, $amount: 10);
+        }
+    }
+
+    // gradient - secondary
+    &.st-btn-secondary {
+        background: $secondary-color;
+        color: #fff;
+
+        &:hover {
+            background: darken($color: $secondary-color, $amount: 5);
+        }
+
+        &:active {
+            background: darken($color: $secondary-color, $amount: 10);
+        }
+    }
+
+    // transparent
+    &.st-btn-transparent {
+        background-color: transparent !important;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: transparent !important;
+        }
+    }
+
+    // transparent icon btn
+    &.st-btn-transparent-with-icon {
+        background-color: transparent !important;
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: 600;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: transparent !important;
+        }
+
+        >.icon {
+            height: 32px;
+            width: 32px;
+            background: $primary-color;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18px;
+
+            i {
+                position: relative;
+                @include transition;
+                left: 0;
+            }
+        }
+
+        >.text {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            >.icon {
+                i {
+                    left: 4px;
+                }
+            }
+        }
+
+    }
+
+}

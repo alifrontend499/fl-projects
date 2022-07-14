@@ -1,0 +1,59 @@
+@import 'common-styles/cursors';
+@import 'common-styles/headings';
+@import 'common-styles/buttons';
+@import 'common-styles/colors';
+@import 'common-styles/form';
+
+// flex
+.flex1 {
+    flex: 1;
+}
+
+// common padding top bottom
+$defaut_gap: 30px;
+$LG_gap: 100px;
+
+.com-pad-t,
+.com-pad-tb {
+    padding-top: $defaut_gap;
+}
+
+.com-pad-b,
+.com-pad-tb {
+    padding-bottom: $defaut_gap;
+}
+
+.com-mar-t,
+.com-mar-tb {
+    margin-top: $defaut_gap;
+}
+
+.com-mar-b,
+.com-mar-tb {
+    margin-bottom: $defaut_gap;
+}
+
+@include min_width($BP_lg_min) {
+
+    .com-pad-t,
+    .com-pad-tb {
+        padding-top: $LG_gap;
+    }
+
+    .com-pad-b,
+    .com-pad-tb {
+        padding-bottom: $LG_gap;
+    }
+
+    .com-mar-t,
+    .com-mar-tb {
+        margin-top: $LG_gap;
+    }
+
+    .com-mar-b,
+    .com-mar-tb {
+        margin-bottom: $LG_gap;
+    }
+}
+
+// backgrounds

@@ -1,0 +1,109 @@
+// FORM STYLES
+.st-form {
+    width: 100%;
+
+    >input:not([type=radio]):not([type=checkbox]),
+    >select,
+    >textarea {
+        border-radius: 0;
+        border: none !important;
+        color: #333;
+        background-color: #fff;
+
+        // ON FOCUS
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border: none !important;
+        }
+
+        // PLACEHOLDER
+        &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #333;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #333;
+        }
+
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #333;
+        }
+    }
+
+    // HEIGHT
+    >input:not([type=radio]):not([type=checkbox]),
+    >select {
+        height: 45px;
+    }
+
+    // WIDTH
+    @include min_width($BP_md_min) {
+        &.form-lt,
+        &.form-rt {
+            width: 50%;
+        }
+    
+        &.form-lt {
+            padding-right: 10px;
+        }
+    
+        &.form-rt {
+            padding-left: 10px;
+        }
+    }
+
+    // RESIZE
+    &.no-resize {
+        >textarea {
+            resize: none;
+        }
+    }
+
+    // UNDERLINED
+    &.form-underlined {
+
+        >input:not([type=radio]):not([type=checkbox]),
+        >select,
+        >textarea {
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border-bottom: 1px solid #333 !important;
+        }
+
+        // GRAY
+        &.form-underlined-gray {
+
+            >input:not([type=radio]):not([type=checkbox]),
+            >select,
+            >textarea {
+                border-bottom-color: #acacac !important;
+                color: #fff;
+
+                // PLACEHOLDER
+                &::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: #adadad;
+                    opacity: 1;
+                    /* Firefox */
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #adadad;
+                }
+
+                &::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: #adadad;
+                }
+            }
+        }
+    }
+}

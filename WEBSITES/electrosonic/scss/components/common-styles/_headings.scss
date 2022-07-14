@@ -1,0 +1,81 @@
+.st-heading-container {
+    >.head {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        margin-bottom: 0;
+
+        @include min_width($BP_lg_min) {
+            font-size: 44px;
+            line-height: 54px;
+        }
+    }
+
+    >.pre-head {
+        font-size: 17px;
+        color: $secondary-color;
+        margin-bottom: 2px;
+        font-weight: 600;
+        line-height: normal;
+
+        @include min_width($BP_lg_min) {
+            font-size: 25px;
+        }
+    }
+
+    >.desc {
+        @include min_width($BP_lg_min) {
+            font-size: 17px;
+        }
+    }
+
+    // heading bold
+    &.heading-bolder {
+        >.head {
+            font-weight: 800;
+        }
+    }
+
+    // heading white
+    &.heading-white {
+        color: #fff;
+
+        >.head,
+        >.desc {}
+    }
+
+    // heading shadow
+    &.heading-shadow {
+
+        >.head,
+        >.desc {
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+    }
+
+    // SIZES
+    // lg
+    &.heading-lg {
+        >.head {
+            @include min_width($BP_lg_min) {
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+
+        >.desc {
+            @include min_width($BP_lg_min) {
+                font-size: 19px;
+            }
+        }
+    }
+
+    // sm
+    &.heading-sm {
+        >.head {
+            @include min_width($BP_lg_min) {
+                font-size: 32px;
+            }
+        }
+    }
+}
