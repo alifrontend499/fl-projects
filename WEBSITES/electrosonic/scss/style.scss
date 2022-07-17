@@ -964,12 +964,27 @@ footer {
                 @include min_width($BP_lg_min) {
                     width: 250px;
                 }
+
+                select {
+                    height: 35px;
+                    font-size: 15px;
+                }
             }
 
             margin-bottom: 15px;
 
             @include min_width($BP_lg_min) {
                 margin-bottom: 40px;
+            }
+        }
+
+        .bottom-sec {
+
+            .st-form {
+                select {
+                    height: 35px;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -1079,3 +1094,62 @@ footer {
 }
 
 /* ----- PRODUCTS LISTING VIEW STYLE END ----- */
+
+/* ----- PRODUCTS DETAILS VIEW STYLE START ----- */
+#products-details-view {}
+
+.products-details-view {
+    .rt-sec {
+        .frac {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #afafaf;
+            }
+
+            @include min_width($BP_lg_min) {
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+            }
+
+            .p-name {
+                font-size: 23px;
+                font-weight: 800;
+                line-height: normal;
+
+                @include min_width($BP_lg_min) {
+                    font-size: 33px;
+                }
+            }
+
+            .p-price {
+                font-size: 19px;
+                font-weight: 600;
+                color: #333;
+
+                @include min_width($BP_lg_min) {
+                    font-size: 25px;
+                }
+            }
+
+            .det {
+                font-size: 17px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .share-icons {
+                .s-icon {
+                    font-size: 18px;
+                    color: #333;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+/* ----- PRODUCTS DETAILS VIEW STYLE END ----- */
