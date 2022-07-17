@@ -10,7 +10,7 @@
 }
 
 // common padding top bottom
-$defaut_gap: 30px;
+$defaut_gap: 40px;
 $LG_gap: 100px;
 
 .com-pad-t,
@@ -56,4 +56,28 @@ $LG_gap: 100px;
     }
 }
 
-// backgrounds
+// range slider css
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+    font-size: 12px;
+    background-color: $primary-color;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+    border-top-color: $primary-color;
+}
+
+.irs--round .irs-bar {
+    background-color: $primary-color;
+}
+
+.irs--round .irs-handle {
+    top: 28px;
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+    border-color: $primary-color;
+}

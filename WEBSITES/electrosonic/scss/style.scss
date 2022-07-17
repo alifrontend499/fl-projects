@@ -23,17 +23,28 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
 
-    @include min_width($BP_lg_min) {
+    @include min_width($BP_xl_min) {
         padding-top: 25px;
         padding-bottom: 25px;
     }
 }
 
 .header {
+    $mobileViewVP_forHeader: $BP_lg_max;
+    $mobileViewLeftMenuWidth: 300px;
+
     .logo-sec {
         >a {
-            width: 270px;
+            width: 160px;
             @include transition;
+
+            @include min_width($BP_md_min) {
+                width: 200px;
+            }
+
+            @include min_width($BP_xl_min) {
+                width: 270px;
+            }
         }
     }
 
@@ -52,14 +63,83 @@ header {
 
         .menu-link {
             font-size: 18px;
-            color: #fff;
+            color: #000;
             text-transform: uppercase;
             @include transition;
 
             @include min_width($BP_lg_min) {
+                color: #fff;
+
+                &:not(:last-child) {
+                    padding-right: 20px;
+                }
+            }
+
+            @include min_width($BP_xl_min) {
+
                 &:not(:last-child) {
                     padding-right: 30px;
                 }
+            }
+        }
+
+        // mobile menu
+        @include max_width($mobileViewVP_forHeader) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+            >.inner {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                height: 100%;
+                width: $mobileViewLeftMenuWidth;
+                background-color: #fff;
+                padding-top: 50px;
+                z-index: 1;
+                @include transition(.3s);
+            }
+
+            .menu-link {
+                width: 100%;
+                padding: 12px 20px;
+            }
+
+            .mobile-menu-toggle.mml-close {
+                top: 12px;
+                left: calc(#{$mobileViewLeftMenuWidth} - 150px);
+                color: #333;
+                z-index: 2;
+                font-size: 20px;
+                height: 35px;
+                width: 35px;
+                line-height: 38px;
+                background: #efefef;
+                text-align: center;
+                border-radius: 50%;
+                @include transition(.5s);
+            }
+        }
+
+        // menu visible on mobile
+        &.active {
+            opacity: 1;
+            visibility: visible;
+
+            >.inner {
+                left: 0;
+            }
+
+            .mobile-menu-toggle.mml-close {
+                opacity: 1;
+                left: calc(#{$mobileViewLeftMenuWidth} - 50px);
             }
         }
     }
@@ -70,8 +150,10 @@ header {
             color: #fff;
             @include transition;
 
-            @include min_width($BP_lg_min) {
-                &:not(:last-child) {
+            &:not(:last-child) {
+                padding-right: 20px;
+
+                @include min_width($BP_xl_min) {
                     padding-right: 30px;
                 }
             }
@@ -82,9 +164,14 @@ header {
 // header fixed
 header.fixed {
     background: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+    @include min_width($BP_md_min) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
     @include min_width($BP_lg_min) {
         .header {
@@ -93,18 +180,18 @@ header.fixed {
                     width: 180px;
                 }
             }
+        }
+    }
 
-            .menu-links {
-                .menu-link {
-                    color: #000;
-                }
-            }
+    .menu-links {
+        .menu-link {
+            color: #000;
+        }
+    }
 
-            .menu-icons {
-                .menu-icon {
-                    color: #000;
-                }
-            }
+    .menu-icons {
+        .menu-icon {
+            color: #000;
         }
     }
 }
@@ -147,7 +234,11 @@ header.fixed {
 
         .sub-head {
             color: $secondary-color;
-            font-size: 24px;
+            font-size: 20px;
+
+            @include min_width($BP_lg_min) {
+                font-size: 24px;
+            }
         }
 
         .desc {
@@ -196,8 +287,12 @@ header.fixed {
         }
 
         .icon-sec {
-            width: 80px;
+            width: 65px;
             padding-top: 10px;
+
+            @include min_width($BP_md_min) {
+                width: 80px;
+            }
 
             @include min_width($BP_lg_min) {
                 width: 110px;
@@ -212,12 +307,21 @@ header.fixed {
             }
 
             .head {
-                font-size: 33px;
+                font-size: 24px;
                 font-weight: 600;
+                line-height: normal;
+
+                @include min_width($BP_md_min) {
+                    font-size: 33px;
+                }
             }
 
             .desc {
-                font-size: 18px;
+                font-size: 16px;
+
+                @include min_width($BP_md_min) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -262,8 +366,8 @@ header.fixed {
         }
 
         >.inner-bg {
-            background: rgb(19, 61, 167);
-            background: linear-gradient(45deg, rgba(19, 61, 167, 1) 0%, rgba(2, 170, 213, 1) 100%);
+            background: $primary-color;
+            background: linear-gradient(45deg, $primary-color 0%, $secondary-color 100%);
             padding: 4px;
             border-radius: 10px;
             @include transition(.4s);
@@ -294,27 +398,43 @@ header.fixed {
             }
 
             .head {
-                font-size: 32px;
+                font-size: 24px;
                 font-weight: 800;
                 color: $primary-color;
+
+                @include min_width($BP_md_min) {
+                    font-size: 25px;
+                }
+
+                @include min_width($BP_lg_min) {
+                    font-size: 32px;
+                }
             }
 
             .desc {
-                font-size: 20px;
+                font-size: 16px;
                 color: $dark-grey-text-color;
                 font-weight: 600;
                 line-height: normal;
+
+                @include min_width($BP_md_min) {
+                    font-size: 17px;
+                }
+
+                @include min_width($BP_lg_min) {
+                    font-size: 20px;
+                }
             }
         }
 
         >.inner-bg {
             &:hover {
-                background: rgb(19, 61, 167);
-                background: linear-gradient(90deg, rgba(19, 61, 167, 1) 44%, rgba(2, 170, 213, 1) 100%);
+                background: $primary-color;
+                background: linear-gradient(90deg, $primary-color 44%, $secondary-color 100%);
 
                 >.inner-main {
-                    background: rgb(19, 61, 167);
-                    background: linear-gradient(90deg, rgba(19, 61, 167, 1) 44%, rgba(2, 170, 213, 1) 100%);
+                    background: $primary-color;
+                    background: linear-gradient(90deg, $primary-color 44%, $secondary-color 100%);
                 }
 
                 .text-sec {
@@ -459,7 +579,11 @@ footer {
 
 .footer {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+
+    @include min_width($BP_md_min) {
+        font-size: 18px;
+    }
 
     .footer-item {
         &.fi-info {
@@ -500,6 +624,18 @@ footer {
 
             &:hover {
                 opacity: .8;
+            }
+
+        }
+
+        @include max_width($BP_lg_max) {
+            display: flex;
+            flex-wrap: wrap;
+
+            >.link {
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
             }
         }
     }
@@ -550,3 +686,396 @@ footer {
 }
 
 /* ----- FOOTER STYLE END ----- */
+
+/* ----- PAGE BANNER STYLE START ----- */
+#page-banner {}
+
+.page-banner {
+    .caption {
+        top: 0;
+        left: 0;
+        box-shadow: inset 0px 0px 210px 100px rgba(0, 0, 0, 1);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .links {
+        >a {
+            color: #fff;
+            @include transition;
+            font-size: 16px;
+
+            @include min_width($BP_lg_min) {
+                font-size: 19px;
+            }
+
+            &:not(:last-child)::after {
+                content: '>';
+                margin: 0 10px 0 20px;
+            }
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &:last-child {
+                pointer-events: none !important;
+            }
+        }
+    }
+}
+
+/* ----- PAGE BANNER STYLE END ----- */
+
+/* ----- PAGE | CONTACT US ----- */
+/* ----- CONACT SECTION 2 STYLE START ----- */
+#contact-sec2 {
+    background-color: #efefef;
+}
+
+.contact-sec2 {
+    @include min_width($BP_lg_min) {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .item {
+        @include min_width($BP_lg_min) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @include min_width($BP_md_min) {}
+
+        @include min_width($BP_lg_min) {}
+
+        >.inner-bg {
+            background: $primary-color;
+            background: linear-gradient(49deg, $primary-color 6%, $secondary-color 100%);
+            padding: 4px;
+            @include transition;
+
+            >.inner-main {
+                padding: 20px;
+                @include transition;
+
+                @include min_width($BP_lg_min) {
+                    padding: 30px;
+                }
+            }
+        }
+
+        .icon-sec {
+            height: 70px;
+            width: 70px;
+            font-size: 27px;
+            border-radius: 50%;
+            background-color: #effafb;
+            color: $primary-color;
+            margin-bottom: 15px;
+
+            @include min_width($BP_lg_min) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .text-sec {
+            color: #fff;
+            font-size: 16px;
+            line-height: normal;
+
+            @include min_width($BP_lg_min) {
+                font-size: 21px;
+            }
+
+        }
+
+        >.inner-bg {
+            &:hover {
+                box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
+
+                >.inner-main {
+                    background-color: #fff !important;
+                }
+
+                .text-sec {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+/* ----- CONACT SECTION 2 STYLE END ----- */
+
+/* ----- PAGE | ABOUT US ----- */
+/* ----- ABOUT MAIN STYLE START ----- */
+#about-main {}
+
+.about-main {
+    .lt-sec {
+        @include min_width($BP_lg_min) {
+            >.inner {
+                max-width: 500px;
+            }
+        }
+
+        .bg-img {
+            top: 40px;
+            left: -5px;
+            width: 100px;
+
+            @include min_width($BP_md_min) {
+                top: 80px;
+                left: -30px;
+            }
+
+            @include min_width($BP_lg_min) {
+                left: -80px;
+            }
+        }
+    }
+
+    .sub-head {
+        color: $secondary-color;
+        font-size: 20px;
+
+        @include min_width($BP_lg_min) {
+            font-size: 24px;
+        }
+    }
+
+    .desc {
+        font-size: 17px;
+
+        @include min_width($BP_lg_min) {
+            font-size: 19px;
+        }
+    }
+}
+
+/* ----- ABOUT MAIN STYLE END ----- */
+
+/* ----- ABOUT MISSION STYLE START ----- */
+#about-mission {
+    background-color: #efefef;
+}
+
+.about-mission {
+    .desc {
+        font-size: 17px;
+        font-weight: 600;
+
+        @include min_width($BP_lg_min) {
+            font-size: 19px;
+        }
+    }
+
+    .lt-sec {
+        @include min_width($BP_lg_min) {
+            padding-right: 100px;
+        }
+    }
+}
+
+/* ----- ABOUT MISSION STYLE END ----- */
+
+/* ----- VISION MISSION STYLE START ----- */
+#vision-mission {}
+
+.vision-mission {
+    .desc {
+        font-size: 17px;
+        font-weight: 600;
+
+        @include min_width($BP_lg_min) {
+            font-size: 19px;
+        }
+    }
+
+    .rt-sec {
+        @include min_width($BP_lg_min) {
+            padding-left: 100px;
+        }
+    }
+}
+
+/* ----- VISION MISSION STYLE END ----- */
+
+/* ----- PAGE | SERVICES ----- */
+
+/* ----- PRODUCTS LISTING VIEW STYLE START ----- */
+#products-listing-view {}
+
+.products-listing-view {
+    .left-bar {
+        @include min_width($BP_md_min) {
+            width: 220px;
+            position: sticky;
+            top: 100px;
+        }
+
+        @include min_width($BP_lg_min) {
+            width: 270px;
+        }
+
+        .frac-head {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 19px;
+        }
+
+        .frac {
+            border-bottom: 1px solid #c6c6c6;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        // responsive
+        @include max_width($BP_md_max) {
+            width: 100%;
+            display: none;
+        }
+    }
+
+    .main-content {
+        @include max_width($BP_md_max) {
+            width: 100%;
+        }
+
+        @include min_width($BP_md_min) {
+            padding-left: 20px;
+        }
+
+        @include min_width($BP_lg_min) {
+            padding-left: 60px;
+        }
+
+        .top-sec {
+            font-size: 16px;
+
+            .st-form {
+                width: 150px;
+
+                @include min_width($BP_md_min) {
+                    width: 180px;
+                }
+
+                @include min_width($BP_lg_min) {
+                    width: 250px;
+                }
+            }
+
+            margin-bottom: 15px;
+
+            @include min_width($BP_lg_min) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .products-listing {
+        @include min_width($BP_md_min) {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+}
+
+.product-item {
+    padding-bottom: 20px;
+
+    @include min_width($BP_md_min) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    >.inner {
+        border: 1px solid #c6c6c6;
+        padding: 15px;
+
+        @include min_width($BP_lg_min) {
+            padding: 20px;
+        }
+
+        @include transition;
+
+        &:hover {
+            box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .img-sec {
+        img {
+            max-height: 100%;
+            height: 200px;
+        }
+    }
+
+    .text-sec {
+        .p-name {
+            font-weight: 600;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .p-type {
+            color: $primary-color;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .p-price {
+            font-weight: 700;
+            font-size: 24px;
+            color: #333;
+        }
+    }
+
+    .favourite-checkbox {
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+
+            &.checked {
+                display: none;
+            }
+        }
+
+        >input:checked {
+            ~.checked {
+                display: block;
+            }
+
+            +.not-checked {
+                display: none;
+            }
+        }
+    }
+}
+
+.pagination {
+    .p-link {
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+        color: #333;
+        @include transition;
+
+        &.left,
+        &.right {
+            border: 1px solid #c6c6c6;
+        }
+
+        &.active,
+        &:hover {
+            color: #000;
+            font-weight: 600;
+        }
+    }
+}
+
+/* ----- PRODUCTS LISTING VIEW STYLE END ----- */

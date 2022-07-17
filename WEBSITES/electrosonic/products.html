@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroSonic | services</title>
+
+    <!-- css | assets -->
+    <link rel="stylesheet" href="assets/bootstrap-5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/feather-icons/feather.css">
+    <link rel="stylesheet" href="assets/swipper-slider/css/swiper-bundle.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- RANGE SLIDER -->
+    <link rel="stylesheet" href="assets/ion.rangeSlider/css/ion.rangeSlider.min.css">
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="header d-flex align-items-center">
+                <!-- logo -->
+                <div class="logo-sec">
+                    <a href="#" class="d-inline-flex">
+                        <img src="images/logo.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- menu -->
+                <div class="menu-sec flex1">
+                    <div class="inner d-flex justify-content-end align-items-center">
+                        <!-- links -->
+                        <div class="menu-links">
+                            <!-- menu icon mobile | close -->
+                            <a href="#"
+                                class="menu-icon mobile-menu-toggle mml-close text-decoration-none position-absolute d-lg-none"
+                                title="open menu">
+                                <i class="feather-x"></i>
+                            </a>
+
+                            <div class="inner d-lg-flex flex-wrap">
+                                <!-- link -->
+                                <a href="#" class="menu-link d-inline-flex text-decoration-none">
+                                    <span class="text">Home</span>
+                                </a>
+
+                                <!-- link -->
+                                <a href="#" class="menu-link d-inline-flex text-decoration-none">
+                                    <span class="text">About us</span>
+                                </a>
+                                <!-- link -->
+                                <a href="#" class="menu-link d-inline-flex text-decoration-none">
+                                    <span class="text">Products</span>
+                                    <div class="icon ms-2">
+                                        <i class="feather-chevron-down"></i>
+                                    </div>
+                                </a>
+                                <!-- link -->
+                                <a href="#" class="menu-link d-inline-flex text-decoration-none">
+                                    <span class="text">Services</span>
+                                </a>
+                                <!-- link -->
+                                <a href="#" class="menu-link d-inline-flex text-decoration-none">
+                                    <span class="text">Contact us</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- icons -->
+                        <div class="menu-icons d-flex">
+                            <!-- icon -->
+                            <a href="#" class="menu-icon search text-decoration-none" title="Search">
+                                <i class="feather-search"></i>
+                            </a>
+
+                            <!-- icon -->
+                            <a href="#" class="menu-icon cart text-decoration-none" title="Cart">
+                                <i class="feather-shopping-cart"></i>
+                            </a>
+
+                            <!-- menu icon mobile | open -->
+                            <a href="#" class="menu-icon mobile-menu-toggle mml-open text-decoration-none d-lg-none"
+                                title="open menu">
+                                <i class="feather-menu"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- slider -->
+        <section id="page-banner">
+            <div class="container-fluid px-0">
+                <div class="page-banner position-relative">
+                    <img src="images/about-banner.jpg" alt="" class="img-fluid w-100">
+                    <div class="caption h-100 w-100 position-absolute d-flex align-items-center">
+                        <div class="container">
+                            <div class="caption-inner">
+                                <!-- head -->
+                                <div
+                                    class="st-heading-container heading-lg heading-bolder heading-white heading-shadow mb-2 mb-lg-3">
+                                    <p class="head">
+                                        Services
+                                    </p>
+                                </div>
+
+                                <div class="links">
+                                    <a href="#" class="text-decoration-none d-inline-block">Home</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">Services</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- products listing view -->
+        <section id="products-listing-view" class="com-pad-tb">
+            <div class="container">
+                <div class="products-listing-view d-flex flex-wrap">
+                    <div class="mobile-filter-btn d-md-none w-100 mb-2">
+                        <button class="btn st-btn st-btn-primary no-min-width d-flex align-items-center mobile-filter-btn">
+                            <i class="feather-filter mr-1"></i>
+                            <span>Filters</span>
+                        </button>
+                    </div>
+
+                    <!-- left bar -->
+                    <div class="left-bar align-self-start">
+                        <div class="inner">
+                            <!-- frac | search -->
+                            <div class="frac search">
+                                <div class="frac-inner">
+                                    <!-- head -->
+                                    <p class="frac-head mb-2 mb-lg-3">search</p>
+
+                                    <!-- form -->
+                                    <div class="search-form st-form d-flex">
+                                        <input type="text" class="form-control" placeholder="Search for products">
+                                        <button class="btn st-btn st-btn-secondary no-min-width">
+                                            <i class="feather-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- frac | categories -->
+                            <div class="frac categories">
+                                <div class="frac-inner">
+                                    <!-- head -->
+                                    <p class="frac-head mb-2 mb-lg-3">categories</p>
+
+                                    <!-- form -->
+                                    <div class="categories-form st-form">
+                                        <select class="form-control">
+                                            <option value="0">category 1</option>
+                                            <option value="1">category 1</option>
+                                            <option value="2">category 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- frac | filter by price -->
+                            <div class="frac filter-by-price">
+                                <div class="frac-inner">
+                                    <!-- head -->
+                                    <p class="frac-head mb-2 mb-lg-3">filter by price</p>
+
+                                    <!-- form -->
+                                    <div class="filter-form">
+                                        <input type="text" class="price-range" name="my_range" value="" />
+                                    </div>
+                                    <p class="mb-0 mt-3 pl-2">Price: ₹0 — ₹375,000</p>
+                                    <div class="text-end mt-2">
+                                        <button
+                                            class="btn st-btn no-min-width st-btn-secondary st-fw-600 st-fs-16 h-auto py-1">FILTER</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- frac | filter -->
+                            <div class="frac filter mb-0 pb-0 border-bottom-0">
+                                <div class="frac-inner">
+                                    <!-- head -->
+                                    <p class="frac-head mb-2 mb-lg-3">filter</p>
+
+                                    <!-- form -->
+                                    <div class="search-form st-form">
+                                        <select class="form-control mb-3">
+                                            <option disabled selected>Brand</option>
+                                            <option value="0">Brand 1</option>
+                                            <option value="1">Brand 1</option>
+                                            <option value="2">Brand 1</option>
+                                        </select>
+
+                                        <select class="form-control mb-3">
+                                            <option disabled selected>Technology</option>
+                                            <option value="0">Technology 1</option>
+                                            <option value="1">Technology 1</option>
+                                            <option value="2">Technology 1</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- main content -->
+                    <div class="main-content flex1">
+                        <div class="inner">
+                            <!-- top sec -->
+                            <div class="top-sec">
+                                <div class="inner d-flex justify-content-between align-items-center">
+                                    <p class="mb-0">
+                                        Showing all <span>6</span> results
+                                    </p>
+
+                                    <div class="st-form d-flex align-items-center ps-2">
+                                        <p class="mb-0 pe-2 pe-lg-3">Sort</p>
+                                        <select class="form-control">
+                                            <option disabled selected>Sort By</option>
+                                            <option value="0">Price, low to high</option>
+                                            <option value="1">Price, low to high</option>
+                                            <option value="2">Price, low to high</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- products listing -->
+                            <div class="products-listing">
+                                <div class="inner d-flex flex-wrap">
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <span class="">Product Enquiry</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-primary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <i class="feather-shopping-cart"></i>
+                                                    <span class="ms-2">Add to cart</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <span class="">Product Enquiry</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-primary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <i class="feather-shopping-cart"></i>
+                                                    <span class="ms-2">Add to cart</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <span class="">Product Enquiry</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product item -->
+                                    <div class="product-item col-12 col-lg-6 col-xl-4">
+                                        <div class="inner position-relative">
+                                            <!-- img sec -->
+                                            <div class="img-sec text-center mb-3 mb-lg-4">
+                                                <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                            </div>
+
+                                            <!-- favourite checkbox -->
+                                            <label class="favourite-checkbox position-absolute">
+                                                <input type="checkbox" class="d-none">
+                                                <img src="images/icons/heart-empty.png" alt=""
+                                                    class="img-fluid not-checked">
+                                                <img src="images/icons/heart-filled.png" alt=""
+                                                    class="img-fluid checked">
+                                            </label>
+
+                                            <!-- text sec -->
+                                            <div class="text-sec text-center">
+                                                <p class="p-name mb-1">
+                                                    Kenwood walkie talkie TK-3501
+                                                    (License free PMR Radio)
+                                                </p>
+                                                <p class="p-type mb-1">
+                                                    Walkie Talkie
+                                                </p>
+                                                <p class="p-price mb-2 mb-lg-3">
+                                                    ₹11,000.00
+                                                </p>
+                                                <button
+                                                    class="btn st-btn st-btn-primary d-inline-flex align-items-center justify-content-center w-100">
+                                                    <i class="feather-shopping-cart"></i>
+                                                    <span class="ms-2">Add to cart</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- bottom sec -->
+                            <div class="bottom-sec">
+                                <div class="inner d-flex align-items-center">
+                                    <div class="pagination d-flex align-items-center">
+                                        <a href=""
+                                            class="p-link left d-inline-flex align-items-center justify-content-center text-decoration-none">
+                                            <i class="feather-chevron-left"></i>
+                                        </a>
+
+                                        <a href=""
+                                            class="p-link d-inline-flex align-items-center justify-content-center text-decoration-none active">
+                                            1
+                                        </a>
+                                        <a href=""
+                                            class="p-link d-inline-flex align-items-center justify-content-center text-decoration-none">
+                                            2
+                                        </a>
+                                        <a href=""
+                                            class="p-link d-inline-flex align-items-center justify-content-center text-decoration-none">
+                                            3
+                                        </a>
+
+                                        <a href=""
+                                            class="p-link right d-inline-flex align-items-center justify-content-center text-decoration-none">
+                                            <i class="feather-chevron-right"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="st-form d-inline-flex align-items-center ms-auto ps-2 w-auto">
+                                        <p class="mb-0 pe-2 pe-lg-3">Show</p>
+                                        <select class="form-control" style="width: 80px;">
+                                            <option value="0">10</option>
+                                            <option value="1">11</option>
+                                            <option value="2">12</option>
+                                        </select>
+                                        <p class="mb-0 ps-2 ps-lg-3">Per Page</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="footer row">
+                    <!-- item -->
+                    <div class="footer-item fi-info col-12 col-lg-6 col-xl-4 mb-3 mb-md-4 mb-lg-0">
+                        <div class="inner">
+                            <img src="images/footer-logo.png" alt="" class="img-fluid logo">
+                            <p class="desc text-white mt-2 mt-lg-4 mb-0">
+                                Get more value out of your phone. Simplify your business communications with a single
+                                product that does what you need, when you need it. Build better relationships with every
+                                customer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="footer-item fi-usefull-links col-12 col-lg-6 col-xl-2 mb-2 mb-lg-0">
+                        <div class="inner">
+                            <!-- heading -->
+                            <div class="st-heading-container heading-white heading-sm mb-3 mb-lg-4">
+                                <p class="head">
+                                    Useful Links
+                                </p>
+                            </div>
+
+                            <div class="links-list">
+                                <!-- link -->
+                                <a href="#" class="link d-inline-block text-decoration-none text-white mb-3">
+                                    Home
+                                </a> <br />
+
+                                <!-- link -->
+                                <a href="#" class="link d-inline-block text-decoration-none text-white mb-3">
+                                    About us
+                                </a> <br />
+
+                                <!-- link -->
+                                <a href="#" class="link d-inline-block text-decoration-none text-white mb-3">
+                                    Products
+                                </a> <br />
+
+                                <!-- link -->
+                                <a href="#" class="link d-inline-block text-decoration-none text-white mb-3">
+                                    Services
+                                </a> <br />
+
+                                <!-- link -->
+                                <a href="#" class="link d-inline-block text-decoration-none text-white mb-3">
+                                    Contacts
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="footer-item fi-newsletter col-12 col-lg-6 col-xl-3 mb-3 mb-md-4 mb-lg-0">
+                        <div class="inner">
+                            <!-- heading -->
+                            <div class="st-heading-container heading-white heading-sm mb-3 mb-lg-4">
+                                <p class="head">
+                                    Newsletter
+                                </p>
+                            </div>
+
+                            <div class="newsletter-form">
+                                <p class="desc">Sign up your Newsletter</p>
+
+                                <div class="st-form mb-3 mb-lg-4">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="btns">
+                                    <button
+                                        class="btn st-btn st-btn-secondary no-min-width font-family-lato st-fs-18 px-lg-4">
+                                        <span class="text">Subscribe</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="footer-item fi-contact-us col-12 col-lg-6 col-xl-3">
+                        <div class="inner">
+                            <!-- heading -->
+                            <div class="st-heading-container heading-white heading-sm mb-3 mb-lg-4">
+                                <p class="head">
+                                    Contact Us
+                                </p>
+                            </div>
+
+                            <a href="mailto:info@electrosonic.com"
+                                class="info-item d-flex align-items-center text-decoration-none text-white mb-2 mb-lg-3">
+                                <i class="feather-mail"></i>
+                                <span class="ms-2 ms-lg-3">
+                                    info@electrosonic.com
+                                </span>
+                            </a>
+
+                            <a href="callto:+91 98880-98880"
+                                class="info-item d-flex align-items-center text-decoration-none text-white mb-2 mb-lg-3">
+                                <i class="feather-phone-call"></i>
+                                <span class="ms-2 ms-lg-3">
+                                    +91 98880-98880
+                                </span>
+                            </a>
+
+                            <div class="social-links pt-3">
+                                <!-- link -->
+                                <a href="#" class="sl-link text-decoration-none text-white">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <!-- link -->
+                                <a href="#" class="sl-link text-decoration-none text-white">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <!-- link -->
+                                <a href="#" class="sl-link text-decoration-none text-white">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="item-copyright col-12">
+                        <div class="inner">
+                            <p class="text-white text-center mb-0">
+                                Copyright © 2022 Electsonic Technology . All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- js | assets -->
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/bootstrap-5.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/swipper-slider/js/swiper-bundle.min.js"></script>
+
+    <!-- toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- RANGE SLIDER -->
+    <script src="assets/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+
+    <!-- page jquery -->
+    <script>
+        $(function () {
+            $(document).on('change', '.favourite-checkbox > input', function () {
+                if ($(this).is(':checked')) {
+                    Toastify({
+                        close: true
+                    });
+                    Toastify({
+                        text: "Added to favourites",
+                        duration: 2000,
+                        className: "default-toastify",
+                        style: {
+                            background: '#133da7'
+                        }
+                    }).showToast();
+                } else {
+                    Toastify({
+                        close: true
+                    });
+                    Toastify({
+                        text: "Removed from favourites",
+                        duration: 2000,
+                        className: "default-toastify",
+                        style: {
+                            background: '#133da7'
+                        }
+                    }).showToast();
+                }
+            });
+
+            // range slider
+            $(".price-range").ionRangeSlider({
+                skin: "round",
+                type: "double",
+                min: 0,
+                max: 375,
+                step: 10,
+                from: 10,
+                to: 5000,
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
