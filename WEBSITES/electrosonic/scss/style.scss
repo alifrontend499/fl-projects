@@ -16,16 +16,28 @@ body {
 /* ----- HEADER STYLE START ----- */
 header {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 9;
     width: 100%;
     @include transition;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    @include min_width($BP_md_min) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
     @include min_width($BP_xl_min) {
         padding-top: 25px;
         padding-bottom: 25px;
+    }
+
+    // responsive
+    @include max_width($BP_md_max) {
+        background-color: #fff;
     }
 }
 
@@ -157,6 +169,10 @@ header {
                     padding-right: 30px;
                 }
             }
+
+            @include max_width($BP_md_max) {
+                color: #000;
+            }
         }
     }
 }
@@ -198,6 +214,15 @@ header.fixed {
 
 /* ----- HEADER STYLE END ----- */
 
+/* ----- MAIN STYLE START ----- */
+#main {
+    @include max_width($BP_md_max) {
+        margin-top: 68px;
+    }
+}
+
+/* ----- MAIN STYLE END ----- */
+
 
 /* ----- SILDER STYLE START ----- */
 #home-slider {}
@@ -208,7 +233,11 @@ header.fixed {
         >.overlay {
             top: 0;
             left: 0;
-            box-shadow: inset 0px 0px 210px 100px rgba(0, 0, 0, 1);
+            box-shadow: inset 0px 0px 100px 20px rgba(0, 0, 0, 1);
+
+            @include min_width($BP_md_min) {
+                box-shadow: inset 0px 0px 210px 100px rgba(0, 0, 0, 1);
+            }
         }
 
         >.caption {
@@ -694,9 +723,13 @@ footer {
     .caption {
         top: 0;
         left: 0;
-        box-shadow: inset 0px 0px 210px 100px rgba(0, 0, 0, 1);
         padding-top: 20px;
         padding-bottom: 20px;
+        box-shadow: inset 0px 0px 100px 20px rgba(0, 0, 0, 1);
+
+        @include min_width($BP_md_min) {
+            box-shadow: inset 0px 0px 210px 100px rgba(0, 0, 0, 1);
+        }
     }
 
     .links {
@@ -803,6 +836,17 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* ----- CONACT SECTION 2 STYLE END ----- */
+
+/* ----- CONACT SECTION 2 STYLE START ----- */
+#contact-map {}
+
+.contact-map {
+    iframe {
+        margin-bottom: -7px;
     }
 }
 

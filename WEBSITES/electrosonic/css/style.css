@@ -137,8 +137,10 @@
 body { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 400; color: #0b0b0b; }
 
 /* ----- HEADER STYLE START ----- */
-header { position: fixed; z-index: 9; width: 100%; transition: 0.2s; padding-top: 15px; padding-bottom: 15px; }
+header { position: fixed; top: 0; left: 0; z-index: 9; width: 100%; transition: 0.2s; padding-top: 5px; padding-bottom: 5px; }
+@media screen and (min-width: 768px) { header { padding-top: 15px; padding-bottom: 15px; } }
 @media screen and (min-width: 1200px) { header { padding-top: 25px; padding-bottom: 25px; } }
+@media screen and (max-width: 767px) { header { background-color: #fff; } }
 
 .header .logo-sec > a { width: 160px; transition: 0.2s; }
 @media screen and (min-width: 768px) { .header .logo-sec > a { width: 200px; } }
@@ -160,6 +162,7 @@ header { position: fixed; z-index: 9; width: 100%; transition: 0.2s; padding-top
 .header .menu-icons .menu-icon { font-size: 20px; color: #fff; transition: 0.2s; }
 .header .menu-icons .menu-icon:not(:last-child) { padding-right: 20px; }
 @media screen and (min-width: 1200px) { .header .menu-icons .menu-icon:not(:last-child) { padding-right: 30px; } }
+@media screen and (max-width: 767px) { .header .menu-icons .menu-icon { color: #000; } }
 
 header.fixed { background: #fff; padding-top: 5px; padding-bottom: 5px; box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1); }
 @media screen and (min-width: 768px) { header.fixed { padding-top: 10px; padding-bottom: 10px; } }
@@ -168,8 +171,13 @@ header.fixed .menu-links .menu-link { color: #000; }
 header.fixed .menu-icons .menu-icon { color: #000; }
 
 /* ----- HEADER STYLE END ----- */
+/* ----- MAIN STYLE START ----- */
+@media screen and (max-width: 767px) { #main { margin-top: 68px; } }
+
+/* ----- MAIN STYLE END ----- */
 /* ----- SILDER STYLE START ----- */
-.home-slider .swiper-slide > .overlay { top: 0; left: 0; box-shadow: inset 0px 0px 210px 100px black; }
+.home-slider .swiper-slide > .overlay { top: 0; left: 0; box-shadow: inset 0px 0px 100px 20px black; }
+@media screen and (min-width: 768px) { .home-slider .swiper-slide > .overlay { box-shadow: inset 0px 0px 210px 100px black; } }
 .home-slider .swiper-slide > .caption { top: 0; left: 0; }
 
 /* ----- SILDER STYLE END ----- */
@@ -280,7 +288,8 @@ footer { background: #133da7; padding-top: 30px; padding-bottom: 15px; }
 
 /* ----- FOOTER STYLE END ----- */
 /* ----- PAGE BANNER STYLE START ----- */
-.page-banner .caption { top: 0; left: 0; box-shadow: inset 0px 0px 210px 100px black; padding-top: 20px; padding-bottom: 20px; }
+.page-banner .caption { top: 0; left: 0; padding-top: 20px; padding-bottom: 20px; box-shadow: inset 0px 0px 100px 20px black; }
+@media screen and (min-width: 768px) { .page-banner .caption { box-shadow: inset 0px 0px 210px 100px black; } }
 .page-banner .links > a { color: #fff; transition: 0.2s; font-size: 16px; }
 @media screen and (min-width: 992px) { .page-banner .links > a { font-size: 19px; } }
 .page-banner .links > a:not(:last-child)::after { content: '>'; margin: 0 10px 0 20px; }
@@ -304,6 +313,10 @@ footer { background: #133da7; padding-top: 30px; padding-bottom: 15px; }
 .contact-sec2 .item > .inner-bg:hover { box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3); }
 .contact-sec2 .item > .inner-bg:hover > .inner-main { background-color: #fff !important; }
 .contact-sec2 .item > .inner-bg:hover .text-sec { color: #333; }
+
+/* ----- CONACT SECTION 2 STYLE END ----- */
+/* ----- CONACT SECTION 2 STYLE START ----- */
+.contact-map iframe { margin-bottom: -7px; }
 
 /* ----- CONACT SECTION 2 STYLE END ----- */
 /* ----- PAGE | ABOUT US ----- */
