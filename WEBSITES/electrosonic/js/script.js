@@ -45,4 +45,16 @@ $(function () {
         });
     })();
 
+    // FUNC | MOBILE TAB BUTTON
+    (function () {
+        // toggling menu
+        $(document).on('click', '#nav-tab > .tb-item', function (ev) {
+            if ($(window).width() < 768) {
+                $('html, body').animate({
+                    scrollTop: $('.tab-content').offset().top - (70 + 10)
+                });
+            }
+        });
+    })();
+
 });

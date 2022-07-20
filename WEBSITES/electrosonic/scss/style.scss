@@ -1197,3 +1197,66 @@ footer {
 }
 
 /* ----- PRODUCTS DETAILS VIEW STYLE END ----- */
+
+/* ----- PRODUCTS ADDITIONAL VIEW STYLE START ----- */
+#products-additional-details {
+    nav {
+        background-color: $secondary-color;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .tb-item {
+            padding: 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 15px 13px;
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            line-height: normal;
+
+            @include min_width($BP_md_min) {
+                margin: 0 5px;
+            }
+
+            @include min_width($BP_lg_min) {
+                padding: 17px 5px;
+                border-bottom: 4px solid transparent;
+
+                &.active {
+                    border-bottom-color: $primary-color;
+                }
+            }
+
+            @include max_width($BP_lg_max) {
+                &.active {
+                    background-color: $primary-color;
+                }
+            }
+
+        }
+    }
+
+    .tab-content {
+        .tab-pane {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @include min_width($BP_lg_min) {
+            .tab-pane {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+
+        .p-desc {
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}
+
+/* ----- PRODUCTS ADDITIONAL VIEW STYLE END ----- */
