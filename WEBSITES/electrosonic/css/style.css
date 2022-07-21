@@ -221,6 +221,7 @@ header.fixed .menu-icons .menu-icon { color: #000; }
 .our-products .item > .inner-bg { background: #133da7; background: linear-gradient(45deg, #133da7 0%, #01a3cc 100%); padding: 4px; border-radius: 10px; transition: 0.4s; }
 .our-products .item > .inner-bg > .inner-main { background-color: #fff; padding: 15px; border-radius: 5px; transition: 0.4s; }
 @media screen and (min-width: 992px) { .our-products .item > .inner-bg > .inner-main { padding: 35px; } }
+.our-products .item .img-sec { width: 90px; }
 .our-products .item .text-sec { padding-left: 15px; }
 @media screen and (min-width: 992px) { .our-products .item .text-sec { padding-left: 25px; } }
 .our-products .item .text-sec .head, .our-products .item .text-sec .desc { transition: 0.2s; }
