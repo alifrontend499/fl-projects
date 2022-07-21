@@ -96,8 +96,8 @@
 .st-bg-gradient { background: #133da7; background: linear-gradient(35deg, #133da7 30%, #02aad5 100%); }
 
 .st-form { width: 100%; }
-.st-form > input:not([type=radio]):not([type=checkbox]), .st-form > select, .st-form > textarea { border-radius: 0; border: 1px solid #c6c6c6; color: #333; background-color: #fff; }
-.st-form > input:not([type=radio]):not([type=checkbox]):focus, .st-form > select:focus, .st-form > textarea:focus { box-shadow: none !important; outline: none !important; }
+.st-form > input:not([type=radio]):not([type=checkbox]), .st-form > select, .st-form > textarea { border-radius: 0; border-color: #c6c6c6; color: #333; background-color: #fff; }
+.st-form > input:not([type=radio]):not([type=checkbox]):focus, .st-form > select:focus, .st-form > textarea:focus { border-color: #9c9c9c; box-shadow: none !important; outline: none !important; }
 .st-form > input:not([type=radio]):not([type=checkbox])::placeholder, .st-form > select::placeholder, .st-form > textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: #333; opacity: 1; /* Firefox */ }
 .st-form > input:not([type=radio]):not([type=checkbox]):-ms-input-placeholder, .st-form > select:-ms-input-placeholder, .st-form > textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #333; }
 .st-form > input:not([type=radio]):not([type=checkbox])::-ms-input-placeholder, .st-form > select::-ms-input-placeholder, .st-form > textarea::-ms-input-placeholder { /* Microsoft Edge */ color: #333; }
@@ -410,5 +410,12 @@ footer { background: #133da7; padding-top: 30px; padding-bottom: 15px; }
 #products-additional-details .tab-content .p-desc { font-size: 17px; font-weight: 600; }
 
 /* ----- PRODUCTS ADDITIONAL VIEW STYLE END ----- */
+/* ----- QNQUIRY FORM STYLE START ----- */
+.qnquiry-form .lt > .img, .qnquiry-form .rt > .form { height: 100%; padding: 30px; }
+.qnquiry-form .rt > .form { background-color: #f7f7f7; }
+.qnquiry-form .rt > .form .heading { font-size: 30px; font-weight: 600; }
+@media screen and (min-width: 992px) { .qnquiry-form .rt > .form .heading { font-size: 30px; } }
+
+/* ----- QNQUIRY FORM STYLE END ----- */
 
 /*# sourceMappingURL=style.css.map */

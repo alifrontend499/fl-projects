@@ -1264,3 +1264,28 @@ footer {
 }
 
 /* ----- PRODUCTS ADDITIONAL VIEW STYLE END ----- */
+
+/* ----- QNQUIRY FORM STYLE START ----- */
+.qnquiry-form {
+
+    .lt>.img,
+    .rt>.form {
+        height: 100%;
+        padding: 30px;
+    }
+
+    .rt>.form {
+        background-color: #f7f7f7;
+
+        .heading {
+            font-size: 30px;
+            font-weight: 600;
+
+            @include min_width($BP_lg_min) {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+/* ----- QNQUIRY FORM STYLE END ----- */

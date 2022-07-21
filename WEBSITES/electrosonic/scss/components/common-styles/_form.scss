@@ -6,12 +6,13 @@
     >select,
     >textarea {
         border-radius: 0;
-        border: 1px solid #c6c6c6;
+        border-color: #c6c6c6;
         color: #333;
         background-color: #fff;
 
         // ON FOCUS
         &:focus {
+            border-color: #9c9c9c;
             box-shadow: none !important;
             outline: none !important;
         }
@@ -43,15 +44,16 @@
 
     // WIDTH
     @include min_width($BP_md_min) {
+
         &.form-lt,
         &.form-rt {
             width: 50%;
         }
-    
+
         &.form-lt {
             padding-right: 10px;
         }
-    
+
         &.form-rt {
             padding-left: 10px;
         }

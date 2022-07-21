@@ -270,7 +270,8 @@
                                                     ₹11,000.00
                                                 </p>
                                                 <button
-                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100"
+                                                    data-bs-toggle="modal" data-bs-target="#enquiry-modal">
                                                     <span class="">Product Enquiry</span>
                                                 </button>
                                             </div>
@@ -329,7 +330,8 @@
                                                     ₹11,000.00
                                                 </p>
                                                 <button
-                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100"
+                                                    data-bs-toggle="modal" data-bs-target="#enquiry-modal">
                                                     <span class="">Product Enquiry</span>
                                                 </button>
                                             </div>
@@ -388,7 +390,8 @@
                                                     ₹11,000.00
                                                 </p>
                                                 <button
-                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100">
+                                                    class="btn st-btn st-btn-secondary d-inline-flex align-items-center justify-content-center w-100"
+                                                    data-bs-toggle="modal" data-bs-target="#enquiry-modal">
                                                     <span class="">Product Enquiry</span>
                                                 </button>
                                             </div>
@@ -473,7 +476,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- footer -->
         <footer>
@@ -616,6 +618,61 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="enquiry-modal" tabindex="-1" aria-labelledby="enquiry-modal" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <div class="qnquiry-form">
+                            <div class="qnquiry-form-content d-flex flex-wrap">
+                                <!-- lt -->
+                                <div class="lt col-12 col-lg-6">
+                                    <div class="img d-flex align-items-center justify-content-center">
+                                        <img src="images/product-img1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <!-- rt -->
+                                <div class="rt col-12 col-lg-6">
+                                    <div class="form">
+                                        <!-- heading -->
+                                        <p class="heading">
+                                            Product Enquiry
+                                        </p>
+
+                                        <!-- form item -->
+                                        <div class="st-form mb-3">
+                                            <label class="mb-1">Name</label>
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </div>
+
+                                        <!-- form item -->
+                                        <div class="st-form mb-3">
+                                            <label class="mb-1">Email</label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+
+                                        <!-- form item -->
+                                        <div class="st-form mb-3">
+                                            <label class="mb-1">Message</label>
+                                            <textarea rows="6" class="form-control" placeholder="Message"></textarea>
+                                        </div>
+
+                                        <!-- form item -->
+                                        <div class="st-form">
+                                            <button class="btn st-btn st-btn-secondary w-100">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- js | assets -->
