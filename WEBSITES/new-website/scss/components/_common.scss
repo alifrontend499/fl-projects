@@ -1,0 +1,274 @@
+// misc
+a {
+  text-decoration: none;
+  @include transition;
+}
+
+// colors
+.app-color-primary {
+  color: $app_color_primary !important;
+}
+.app-color-secondary {
+  color: $app_color_secondary !important;
+}
+
+// text classes
+.app-fw-100 {
+  font-weight: 100 !important;
+}
+.app-fw-200 {
+  font-weight: 200 !important;
+}
+.app-fw-300 {
+  font-weight: 300 !important;
+}
+.app-fw-400 {
+  font-weight: 400 !important;
+}
+.app-fw-500 {
+  font-weight: 500 !important;
+}
+.app-fw-600 {
+  font-weight: 600 !important;
+}
+.app-fw-700 {
+  font-weight: 700 !important;
+}
+.app-fw-800 {
+  font-weight: 800 !important;
+}
+.app-fw-900 {
+  font-weight: 900 !important;
+}
+
+// app
+.swiper-pagination.app-swiper-pagination {
+  .swiper-pagination-bullet {
+    height: 9px;
+    width: 9px;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 1;
+    &.swiper-pagination-bullet-active {
+      width: 20px;
+      background-color: $app_color_primary;
+    }
+  }
+}
+
+.app-heading {
+  p {
+    font-family: "Exo", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    @include min_width($BP_md_min) {
+      font-size: 40px;
+    }
+    @include min_width($BP_lg_min) {
+      font-size: 45px;
+    }
+  }
+  &.app-heading-primary {
+    p {
+      color: $app_color_primary;
+    }
+  }
+  &.app-heading-secondary {
+    p {
+      color: $app_color_secondary;
+    }
+  }
+  &.app-heading-white {
+    p {
+      color: #fff;
+    }
+  }
+}
+
+$appTBpadMain: 30px;
+$appTBpadLGmin: 60px;
+.app-tb-pad {
+  padding-top: $appTBpadMain;
+  padding-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-top: $appTBpadLGmin;
+    padding-bottom: $appTBpadLGmin;
+  }
+}
+.app-t-pad {
+  padding-top: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-top: $appTBpadLGmin;
+  }
+}
+.app-b-pad {
+  padding-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-bottom: $appTBpadLGmin;
+  }
+}
+
+.app-tb-mar {
+  margin-top: $appTBpadMain;
+  margin-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-top: $appTBpadLGmin;
+    margin-bottom: $appTBpadLGmin;
+  }
+}
+.app-t-mar {
+  margin-top: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-top: $appTBpadLGmin;
+  }
+}
+.app-b-mar {
+  margin-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-bottom: $appTBpadLGmin;
+  }
+}
+
+.app-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 11px 15px 9px;
+  @include min_width($BP_lg_min) {
+    padding: 11px 20px 9px;
+  }
+  min-width: 135px;
+  display: inline-block;
+  text-decoration: none;
+  @include transition;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+  }
+  &:hover {
+    background-color: #333;
+    box-shadow: 0px 4px 5px rgba(51, 51, 51, 0.5);
+  }
+  &:active {
+    background-color: darken($color: #333, $amount: 5%);
+  }
+
+  // variant | primary
+  &.app-btn-primary {
+    background-color: $app_color_primary;
+    &:hover {
+      box-shadow: 0px 5px 8px rgba(255, 8, 11, 0.5);
+    }
+    &:active {
+      background-color: darken($color: $app_color_primary, $amount: 5%);
+    }
+  }
+  // variant | secondary
+  &.app-btn-secondary {
+    background-color: $app_color_secondary;
+    &:hover {
+      box-shadow: 0px 5px 8px rgba(4, 54, 117, 0.5);
+    }
+    &:active {
+      background-color: darken($color: $app_color_secondary, $amount: 5%);
+    }
+  }
+
+  // button sizes
+  &.app-btn-lg {
+    padding: 12px 19px 11px;
+    @include min_width($BP_lg_min) {
+      padding: 15px 20px 13px;
+      font-size: 18px;
+    }
+  }
+}
+
+.app-form {
+  input:not([type="radio"]):not([type="checkbox"]),
+  select,
+  textarea {
+    border-radius: 0;
+    @include transition;
+    border-color: #b0b0b0;
+    &:focus {
+      box-shadow: none;
+      border-color: $app_color_secondary;
+    }
+  }
+  input:not([type="radio"]):not([type="checkbox"]),
+  select {
+    min-height: 45px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// app label
+.app-label {
+  cursor: pointer;
+  position: relative;
+  span {
+    display: block;
+  }
+  .text {
+    border: 2px solid #eaeaea;
+    position: relative;
+    padding: 7px 20px 7px 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #fff;
+    @include transition;
+  }
+  .round {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #949494;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    &::after {
+      content: "";
+      height: 11px;
+      width: 11px;
+      position: absolute;
+      background: $app_color_primary;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      opacity: 0;
+      @include transition;
+    }
+  }
+  &:hover {
+    .text {
+      border-color: $app_color_primary;
+    }
+    .round {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  > input:checked {
+    + .text {
+      border-color: $app_color_primary;
+      background-color: $app_color_primary;
+      color: #fff;
+    }
+    ~ .round {
+      border-color: #fff;
+      &::after {
+        opacity: 1;
+        background-color: #fff;
+      }
+    }
+  }
+}

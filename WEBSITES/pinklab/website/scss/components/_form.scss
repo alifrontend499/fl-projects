@@ -1,0 +1,22 @@
+.app-form {
+  >input:not([type="radio"]):not([type="checkbox"]),
+  >select,
+  >textarea {
+    @include transition;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    font-size: 14px;
+    width: 100%;
+    &:focus {
+      box-shadow: none !important;
+      border-color: #d4d4d4;
+      background-color: #dfdfdf;
+    }
+  }
+  input:not([type="radio"]):not([type="checkbox"]),
+  select {
+    min-height: 45px;
+  }
+}

@@ -1,0 +1,261 @@
+// misc
+a {
+  text-decoration: none;
+  @include transition;
+  color: #333;
+  &.primary-link-hover:hover {
+    color: $app_color_primary !important;
+  }
+  &.secondary-link-hover:hover {
+    color: $app_color_secondary !important;
+  }
+  &.opacity-link-hover:hover {
+    opacity: 0.9 !important;
+  }
+}
+
+// colors
+.app-color-primary {
+  color: $app_color_primary !important;
+}
+.app-color-secondary {
+  color: $app_color_secondary !important;
+}
+// background colors
+.app-bg-primary {
+  background-color: $app_color_primary !important;
+}
+.app-bg-secondary {
+  background-color: $app_color_secondary !important;
+}
+
+// text classes
+.app-fw-100 {
+  font-weight: 100 !important;
+}
+.app-fw-200 {
+  font-weight: 200 !important;
+}
+.app-fw-300 {
+  font-weight: 300 !important;
+}
+.app-fw-400 {
+  font-weight: 400 !important;
+}
+.app-fw-500 {
+  font-weight: 500 !important;
+}
+.app-fw-600 {
+  font-weight: 600 !important;
+}
+.app-fw-700 {
+  font-weight: 700 !important;
+}
+.app-fw-800 {
+  font-weight: 800 !important;
+}
+.app-fw-900 {
+  font-weight: 900 !important;
+}
+
+.app-fs-11 {
+  font-size: 11px !important;
+}
+.app-fs-12 {
+  font-size: 12px !important;
+}
+.app-fs-13 {
+  font-size: 13px !important;
+}
+.app-fs-14 {
+  font-size: 14px !important;
+}
+.app-fs-15 {
+  font-size: 15px !important;
+}
+.app-fs-16 {
+  font-size: 16px !important;
+}
+.app-fs-17 {
+  font-size: 17px !important;
+}
+.app-fs-18 {
+  font-size: 18px !important;
+}
+.app-fs-19 {
+  font-size: 19px !important;
+}
+.app-fs-20 {
+  font-size: 20px !important;
+}
+
+// app
+.swiper-pagination.app-swiper-pagination {
+  .swiper-pagination-bullet {
+    height: 9px;
+    width: 9px;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 1;
+    &.swiper-pagination-bullet-active {
+      width: 20px;
+      background-color: $app_color_primary;
+    }
+  }
+}
+
+.page-heading-container {
+  .heading {
+    font-size: 25px;
+  }
+  .view-all-link {
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: $app_color_primary;
+      display: block;
+    }
+  }
+}
+
+$appTBpadMain: 30px;
+$appTBpadLGmin: 60px;
+.app-tb-pad {
+  padding-top: $appTBpadMain;
+  padding-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-top: $appTBpadLGmin;
+    padding-bottom: $appTBpadLGmin;
+  }
+}
+.app-t-pad {
+  padding-top: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-top: $appTBpadLGmin;
+  }
+}
+.app-b-pad {
+  padding-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    padding-bottom: $appTBpadLGmin;
+  }
+}
+
+.app-tb-mar {
+  margin-top: $appTBpadMain;
+  margin-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-top: $appTBpadLGmin;
+    margin-bottom: $appTBpadLGmin;
+  }
+}
+.app-t-mar {
+  margin-top: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-top: $appTBpadLGmin;
+  }
+}
+.app-b-mar {
+  margin-bottom: $appTBpadMain;
+  @include min_width($BP_lg_min) {
+    margin-bottom: $appTBpadLGmin;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// app label
+.app-label {
+  cursor: pointer;
+  position: relative;
+  span {
+    display: block;
+  }
+  .text {
+    border: 2px solid #eaeaea;
+    position: relative;
+    padding: 7px 20px 7px 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #fff;
+    @include transition;
+  }
+  .round {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #949494;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    &::after {
+      content: "";
+      height: 11px;
+      width: 11px;
+      position: absolute;
+      background: $app_color_primary;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      opacity: 0;
+      @include transition;
+    }
+  }
+  &:hover {
+    .text {
+      border-color: $app_color_primary;
+    }
+    .round {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  > input:checked {
+    + .text {
+      border-color: $app_color_primary;
+      background-color: $app_color_primary;
+      color: #fff;
+    }
+    ~ .round {
+      border-color: #fff;
+      &::after {
+        opacity: 1;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.shadow-box {
+  box-shadow: 0px 0px 20px rgb(192, 192, 192, 0.1);
+}
+
+.percent-banner {
+  top: 0;
+  right: 30px;
+  background: $app_color_primary;
+  width: 50px;
+  text-align: center;
+  padding: 20px 0 0;
+  color: #fff;
+  p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 11px;
+  }
+  &::after {
+    content: "";
+    content: "";
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-width: 25px;
+    border-color: $app_color_primary;
+    border-bottom-color: #fff;
+  }
+}
